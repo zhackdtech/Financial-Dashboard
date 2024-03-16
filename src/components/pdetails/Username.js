@@ -2,10 +2,10 @@ import React from 'react';
 
 const styles = {
   Text: {
-    color: '#fefefe',
+    color: '#1E2A37',
     fontSize: '14px',
     fontFamily: 'Manrope',
-    fontWeight: 600,
+    fontWeight: 700,
     padding: '3px 0 0 0'
     // lineHeight: '18px',
   },

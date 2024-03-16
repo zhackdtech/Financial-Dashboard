@@ -6,7 +6,7 @@ const styles = {
     left: '20px',
     width: '220px',
     height: '1px',
-    backgroundColor: '#c2c2c2',
+    backgroundColor: '#1E2A37',
     borderRadius: '2px',
   },
 };

@@ -9,11 +9,12 @@ const styles = {
     left: "12px",
     width: "220px",
     height: "65px",
-    backgroundColor: "#1e2a37",
+    backgroundColor: "#fefefe",
     borderRadius: "12px",
-    // border: "1px solid #e5e5e5",
+    border: "1px solid #fefefe",
     boxSizing: "border-box",
-    overflow: "hidden",
+    overflow: "hidden", 
+    boxShadow: '0px 2px 8px rgba(0,0,0,0.16)',
   },
 };
 

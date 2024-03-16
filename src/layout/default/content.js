@@ -1,12 +1,18 @@
+import Topnav from '../../components/topnav';
+
 const styles = {
     mainContent:{
-        backgroundColor: '#1E2A37',
+        backgroundColor: '#fefefe',
         height: '100vh',
     }
 }
 const SideNav = (props) => {
     return(
-        <div style={styles.mainContent} className="mainContent">This is the main content</div>
+        <div style={styles.mainContent} className="mainContent">
+            <div className="container pt-3">
+                <Topnav/>
+            </div>
+        </div>
     )
 }
 

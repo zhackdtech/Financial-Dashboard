@@ -9,7 +9,7 @@ const styles = {
     left: "0px",
     width: "260px",
     height: "100vh",
-    backgroundColor: "#1e2a37",
+    backgroundColor: "#fefefe",
     boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
     position: "fixed",
   },
