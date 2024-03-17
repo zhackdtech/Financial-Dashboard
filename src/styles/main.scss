@@ -1,0 +1,112 @@
+$white: #fff;
+$body-bg: #f8f9fa;
+$shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+$dark:#1E2A37;
+$darker:#212529;
+$darker-90:rgba(33, 37, 41,.7);
+html,
+body {
+  background-color: $body-bg;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  opacity: 0.6;
+}
+
+#sibar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f5f5f5;
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(52, 71, 103, 0.6);
+  opacity: 0.6;
+}
+a {
+  cursor: pointer;
+}
+.SideNav {
+  transition: all 0.3s ease;
+  margin-left: 0px;
+  margin-right: 0px !important;
+}
+.mainContent {
+  width: 100vw;
+}
+.search-wrapper {
+  border-radius: 12px;
+  background-color: $white;
+  padding-right: 12px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  color: var(--light-font);
+  box-shadow: $shadow;
+  overflow: hidden;
+}
+
+.search-input {
+  border: none;
+  flex: 1;
+  outline: none;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: $white;
+  color: #1e2a37;
+  font-weight: 600;
+  &:placeholder {
+    opacity: 0.6;
+  }
+}
+.profile-btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  border-left: 2px solid $darker-90;
+
+  img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+
+  span {
+    color: #1E2A37;
+    font-size: 15px;
+    font-family: 'Manrope';
+    font-weight: 700;
+  }
+}
+.topnav-icon
+{
+    &:hover{
+        opacity: 1 !important;
+    }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent {
+    margin-left: 260px;
+    width: calc(100vw - 260px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .SideNav {
+    position: absolute !important;
+    margin-left: -260px;
+  }
+}

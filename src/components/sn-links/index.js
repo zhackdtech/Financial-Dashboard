@@ -1,12 +1,11 @@
 import React from "react";
-import { 
-    FaHouse,
-    FaChartColumn,
-    FaChartLine,
-    FaMoneyBills,
-    FaMagnifyingGlassChart,
-    FaMoneyBillTransfer,
-    FaChartBar   
+import {
+  FaHouse,
+  FaChalkboardUser,
+  FaCircleUser,
+  FaUserPlus,
+  FaFile ,
+  FaTable,
 } from "react-icons/fa6";
 
 const styles = {
@@ -68,8 +67,8 @@ const Link = (props) => {
           className="d-flex align-items-center px-3"
           style={styles.Links2}
         >
-          <FaChartColumn />
-          &nbsp;&nbsp;Metrics
+          <FaTable />
+          &nbsp;&nbsp;Tables
         </a>
       </div>
       <div className="pb-2">
@@ -78,26 +77,8 @@ const Link = (props) => {
           className="d-flex align-items-center px-3"
           style={styles.Links2}
         >
-          <FaChartLine  />
-          &nbsp;&nbsp;Revenue
-        </a>
-      </div><div className="pb-2">
-        <a
-          href="#"
-          className="d-flex align-items-center px-3"
-          style={styles.Links2}
-        >
-          <FaMoneyBills  />
-          &nbsp;&nbsp;Expenses
-        </a>
-      </div><div className="pb-2">
-        <a
-          href="#"
-          className="d-flex align-items-center px-3"
-          style={styles.Links2}
-        >
-          <FaMagnifyingGlassChart  />
-          &nbsp;&nbsp;Analysis
+          <FaChalkboardUser />
+          &nbsp;&nbsp;Components
         </a>
       </div>
       <div className="pb-2">
@@ -106,17 +87,28 @@ const Link = (props) => {
           className="d-flex align-items-center px-3"
           style={styles.Links2}
         >
-          <FaMoneyBillTransfer  />
-          &nbsp;&nbsp;Cashflow
+          <FaUserPlus />
+          &nbsp;&nbsp;Login
         </a>
-      </div><div className="pb-2">
+      </div>
+      <div className="pb-2">
         <a
           href="#"
           className="d-flex align-items-center px-3"
           style={styles.Links2}
         >
-          <FaChartBar/>
-          &nbsp;&nbsp;Forecasting
+          <FaCircleUser />
+          &nbsp;&nbsp;Profile
+        </a>
+      </div>
+      <div className="pb-2">
+        <a
+          href="#"
+          className="d-flex align-items-center px-3"
+          style={styles.Links2}
+        >
+          <FaFile  />
+          &nbsp;&nbsp;Docs
         </a>
       </div>
     </div>
