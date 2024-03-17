@@ -2,7 +2,7 @@ import Topnav from '../../components/topnav';
 
 const styles = {
     mainContent:{
-        backgroundColor: '#fefefe',
+        backgroundColor: '#F8F9FA',
         height: '100vh',
     }
 }
