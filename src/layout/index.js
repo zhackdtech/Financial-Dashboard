@@ -1,5 +1,8 @@
 import { Sidebar } from "primereact/sidebar";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import Default from "../screens/default.js";
+import { OverlayPanel } from "primereact/overlaypanel";
+import { InputText } from "primereact/inputtext";
 import {
   FaHouse,
   FaChalkboardUser,
@@ -150,10 +153,12 @@ const ClassNames = {
   nav: "navbar",
   topNavLink: "nav-link topNavIcon",
   topNavBurger: "nav-link d-block d-lg-none topnav-icon",
+  topNavSearch: "nav-link d-block d-lg-none topnav-icon",
   mobileSidebar: "mobileSidebar",
 };
 const Layout = (props) => {
   const [visible, setVisible] = useState(false);
+  const op = useRef(null);
   return (
     <>
       {/* start mobile sidebar */}
@@ -333,13 +338,37 @@ const Layout = (props) => {
               {/* just to hide search bar on small screens */}
               <div className="d-block d-lg-none"></div>
               <div class={ClassNames.nav}>
-                <a
-                  href="#"
-                  style={Styles.topNavIcons}
-                  className={ClassNames.topNavLink}
-                >
-                  <FaMagnifyingGlass size={20} />
-                </a>
+                <div>
+                  <a
+                    href="#"
+                    style={Styles.topNavIcons}
+                    className={ClassNames.topNavSearch}
+                    onClick={(e) => op.current.toggle(e)}
+                  >
+                    <FaMagnifyingGlass size={20} />
+                  </a>
+                  <OverlayPanel ref={op}>
+                    <div className="container">
+                      <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow-lg bg-white overflow-hidden w-280px">
+                        <div className="p-2 mb-2 bg-body-tertiary border-bottom mybg-primary">
+                          Search
+                        </div>
+                        <div class="input-group px-2">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Username"
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
+                          />
+                          <span class="input-group-text" id="basic-addon1">
+                            @
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </OverlayPanel>
+                </div>
                 <a
                   href="#"
                   style={Styles.topNavIcons}
@@ -374,10 +403,12 @@ const Layout = (props) => {
             {/* end navbar container */}
           </div>
           {/* end navbar */}
+          {/* put the rest of stuffs here */}
+          <div className="container">
+            <Default />
+          </div>
+          {/* stuffs end */}
         </div>
-        {/* put the rest of stuffs here */}
-        Hello world
-        {/* stuffs end */}
         {/* end main content wrapper */}
       </div>
       {/* end main content */}
