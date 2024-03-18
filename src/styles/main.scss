@@ -42,7 +42,25 @@ $primary: #1059ca;
     }
   }
 }
+.sideNav{
+    margin-left: 0;
+    transition: .8s all ease-in-out;
+    display: block;
+}
+.mainContent{
+    width: 100vw !important;
+    margin-left:0;
+    transition: .8s all ease-in-out;
+}
 @media screen and (min-width: 1200px) {
+    .mainContent{
+        margin-left: 260px !important;
+    }
 }
 @media screen and (max-width: 1200px) {
+  .sideNav {
+    position: absolute;
+    margin-left: -300px;
+    // display: none;
+  }
 }

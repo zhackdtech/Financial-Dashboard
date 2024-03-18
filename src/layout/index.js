@@ -1,6 +1,13 @@
 import { Sidebar } from "primereact/sidebar";
 import React, { useState } from "react";
-
+import {
+  FaHouse,
+  FaChalkboardUser,
+  FaCircleUser,
+  FaUserPlus,
+  FaFile,
+  FaTable,
+} from "react-icons/fa6";
 const defProps = {
   image: "https://avatars.githubusercontent.com/u/50767502?v=4",
   username: "Zhack DTech",
@@ -59,23 +66,66 @@ const Styles = {
     boxSizing: "border-box",
     overflow: "hidden",
     boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
-    cursor:'pointer'
+    cursor: "pointer",
+  },
+  links: {
+    top: "120px",
+    left: "12px",
+    width: "220px",
+    height: "50px",
+    borderRadius: "8px",
+    // boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
+    lineHeight: "-18px",
+    verticalAlign: "baseline",
+    color: "#1E2A37",
+    fontSize: "14px",
+    fontFamily: "Manrope",
+    fontWeight: 600,
+    textDecoration: "none",
+  },
+  activeLink: {
+    color: "",
+    boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
+    top: "120px",
+    left: "12px",
+    width: "220px",
+    height: "50px",
+    borderRadius: "8px",
+    boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
+    lineHeight: "-18px",
+    verticalAlign: "baseline",
+    color: "#F8F9FA",
+    fontSize: "14px",
+    fontFamily: "Manrope",
+    fontWeight: 600,
+    textDecoration: "none",
+    backgroundColor: "#1059CA",
+  },
+  mainContent:{
+    // width:'cal(100vw-260px)'
   },
 };
 const ClassNames = {
   userCardContainer: "d-flex justify-content-center py-3",
-  userCard:'userCard',
+  userCard: "userCard",
   userCardRow: "row g-0",
   userCardImageCol: "col-4",
   userCardImageContainer: "d-flex p-2 justify-content-center userImage",
   userCardTextsCol: "col-8 px-0 mh-100",
   userCardTextsContainer: "d-flex flex-column h-100 py-2",
+  snLinksContainer: "d-flex justify-content-center py-3",
+  snLinksNav: "nav nav-pills flex-column",
+  snContainer: "pb-2",
+  snLink: "d-flex align-items-center px-3",
+  sideNav: "sideNav",
+  mainContent:"mainContent",
+  mainContentWrapper:'container',
 };
 const Layout = (props) => {
   return (
     <>
-    {/* start sidenav */}
-      <div style={Styles.sidenav}>
+      {/* start sidenav */}
+      <div style={Styles.sidenav} className={ClassNames.sideNav}>
         {/* usercard container */}
         <div className={ClassNames.userCardContainer}>
           {/* start user card */}
@@ -103,11 +153,59 @@ const Layout = (props) => {
           {/* end usercard */}
         </div>
         {/* end usercard container */}
-
         {/* start sidenav links */}
+        <div className={ClassNames.snLinksContainer}>
+          <div className={ClassNames.snLinksNav}>
+            <div className={ClassNames.snContainer}>
+              <a
+                href="#"
+                className={ClassNames.snLink}
+                style={Styles.activeLink}
+              >
+                <FaHouse />
+                &nbsp;&nbsp;Home
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaTable />
+                &nbsp;&nbsp;Tables
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaChalkboardUser />
+                &nbsp;&nbsp;Components
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaUserPlus />
+                &nbsp;&nbsp;Login
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaCircleUser />
+                &nbsp;&nbsp;Profile
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaFile />
+                &nbsp;&nbsp;Docs
+              </a>
+            </div>
+          </div>
+        </div>
         {/* end sidenav links */}
       </div>
       {/* end sidenav */}
+      <div className={ClassNames.mainContent} style={Styles.mainContent}>
+        <div className={ClassNames.mainContentWrapper}>
+          
+        </div>
+      </div>
     </>
   );
 };
