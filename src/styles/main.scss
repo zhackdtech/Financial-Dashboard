@@ -117,6 +117,10 @@ $primary: #1059ca;
     opacity: 1 !important;
   }
 }
+.p-sidebar-close.p-sidebar-icon.p-link
+{
+    display: none;
+}
 @media screen and (min-width: 1200px) {
   .mainContent {
     margin-left: 260px !important;

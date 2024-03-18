@@ -16,7 +16,7 @@ const defProps = {
   image: "https://avatars.githubusercontent.com/u/50767502?v=4",
   username: "Zhack DTech",
   email: "wil.marx@gmail.com",
-  usernameInitial:"ZD"
+  usernameInitial: "ZD",
 };
 const Styles = {
   sidenav: {
@@ -121,6 +121,12 @@ const Styles = {
     paddingRight: "20px",
     opacity: ".8",
   },
+  mobileSidebar: {
+    height: "100%",
+    backgroundColor: "#F8F9FA",
+    boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
+    width: "260px",
+  },
 };
 const ClassNames = {
   userCardContainer: "d-flex justify-content-center py-3",
@@ -141,14 +147,95 @@ const ClassNames = {
   navBar: "navbar navbar-expand",
   containerFluid: "container-fluid",
   searchWrapper: "search-wrapper d-none d-lg-flex",
-  nav:"navbar",
-  topNavLink:"nav-link topNavIcon",
-  topNavBurger:"nav-link d-block d-lg-none topnav-icon"
+  nav: "navbar",
+  topNavLink: "nav-link topNavIcon",
+  topNavBurger: "nav-link d-block d-lg-none topnav-icon",
+  mobileSidebar: "mobileSidebar",
 };
 const Layout = (props) => {
-  const [visible,setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   return (
     <>
+      {/* start mobile sidebar */}
+      <Sidebar
+        visible={visible}
+        onHide={() => setVisible(false)}
+        className={ClassNames.mobileSidebar}
+        style={Styles.mobileSidebar}
+      >
+        <div className={ClassNames.userCardContainer}>
+          {/* start user card */}
+          <div style={Styles.userCard} className={ClassNames.userCard}>
+            {/* start user card row */}
+            <div className={ClassNames.userCardRow}>
+              {/* user card image column */}
+              <div className={ClassNames.userCardImageCol}>
+                <div className={ClassNames.userCardImageContainer}>
+                  <div style={Styles.imageContainer}></div>
+                </div>
+              </div>
+              {/* end user card image column */}
+              {/* start user card text column */}
+              <div className={ClassNames.userCardTextsCol}>
+                <div className={ClassNames.userCardTextsContainer}>
+                  <div style={Styles.userText}>{defProps.username}</div>
+                  <div style={Styles.emailText}>{defProps.email}</div>
+                </div>
+              </div>
+              {/* end user card text column */}
+            </div>
+            {/* end user card row */}
+          </div>
+          {/* end usercard */}
+        </div>
+        {/* start sidenav links */}
+        <div className={ClassNames.snLinksContainer}>
+          <div className={ClassNames.snLinksNav}>
+            <div className={ClassNames.snContainer}>
+              <a
+                href="#"
+                className={ClassNames.snLink}
+                style={Styles.activeLink}
+              >
+                <FaHouse />
+                &nbsp;&nbsp;Home
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaTable />
+                &nbsp;&nbsp;Tables
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaChalkboardUser />
+                &nbsp;&nbsp;Components
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaUserPlus />
+                &nbsp;&nbsp;Login
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaCircleUser />
+                &nbsp;&nbsp;Profile
+              </a>
+            </div>
+            <div className={ClassNames.snContainer}>
+              <a href="#" className={ClassNames.snLink} style={Styles.links}>
+                <FaFile />
+                &nbsp;&nbsp;Docs
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* end sidenav links */}
+      </Sidebar>
+      {/* end mobile sidebar */}
       {/* start sidenav */}
       <div style={Styles.sidenav} className={ClassNames.sideNav}>
         {/* usercard container */}
@@ -271,12 +358,15 @@ const Layout = (props) => {
                   href="#"
                   style={Styles.topNavIcons}
                   className={ClassNames.topNavBurger}
+                  onClick={() => setVisible(true)}
                 >
                   <FaBars size={20} />
                 </a>
                 <button class="profile-btn">
                   <img src={defProps.image} />
-                  <span className="d-none d-md-block">&nbsp;{defProps.usernameInitial}</span>
+                  <span className="d-none d-md-block">
+                    &nbsp;{defProps.usernameInitial}
+                  </span>
                 </button>
               </div>
               {/* end hide search bar */}
@@ -285,6 +375,9 @@ const Layout = (props) => {
           </div>
           {/* end navbar */}
         </div>
+        {/* put the rest of stuffs here */}
+        Hello world
+        {/* stuffs end */}
         {/* end main content wrapper */}
       </div>
       {/* end main content */}
