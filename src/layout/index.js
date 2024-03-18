@@ -7,11 +7,16 @@ import {
   FaUserPlus,
   FaFile,
   FaTable,
+  FaMagnifyingGlass,
+  FaEnvelope,
+  FaBell,
+  FaBars,
 } from "react-icons/fa6";
 const defProps = {
   image: "https://avatars.githubusercontent.com/u/50767502?v=4",
   username: "Zhack DTech",
   email: "wil.marx@gmail.com",
+  usernameInitial:"ZD"
 };
 const Styles = {
   sidenav: {
@@ -101,8 +106,20 @@ const Styles = {
     textDecoration: "none",
     backgroundColor: "#1059CA",
   },
-  mainContent:{
+  mainContent: {
     // width:'cal(100vw-260px)'
+  },
+  topNav: {
+    top: "12px",
+    width: "100%",
+    backgroundColor: "transparent",
+    overflow: "hidden",
+  },
+  topNavIcons: {
+    lineHeight: "10px",
+    color: "#212529",
+    paddingRight: "20px",
+    opacity: ".8",
   },
 };
 const ClassNames = {
@@ -118,10 +135,18 @@ const ClassNames = {
   snContainer: "pb-2",
   snLink: "d-flex align-items-center px-3",
   sideNav: "sideNav",
-  mainContent:"mainContent",
-  mainContentWrapper:'container',
+  mainContent: "mainContent",
+  mainContentWrapper: "container",
+  searchInput: "search-input",
+  navBar: "navbar navbar-expand",
+  containerFluid: "container-fluid",
+  searchWrapper: "search-wrapper d-none d-lg-flex",
+  nav:"navbar",
+  topNavLink:"nav-link topNavIcon",
+  topNavBurger:"nav-link d-block d-lg-none topnav-icon"
 };
 const Layout = (props) => {
+  const [visible,setVisible] = useState(true);
   return (
     <>
       {/* start sidenav */}
@@ -201,11 +226,68 @@ const Layout = (props) => {
         {/* end sidenav links */}
       </div>
       {/* end sidenav */}
+      {/* start main content */}
       <div className={ClassNames.mainContent} style={Styles.mainContent}>
+        {/* main content wrapper */}
         <div className={ClassNames.mainContentWrapper}>
-          
+          {/* start navbar*/}
+          <div style={Styles.topNav} className={ClassNames.navBar}>
+            {/* start navbar container */}
+            <div className={ClassNames.containerFluid}>
+              <div className={ClassNames.searchWrapper}>
+                <input
+                  className={ClassNames.searchInput}
+                  type="text"
+                  placeholder="Search"
+                />
+                {/* magnifying glass icon */}
+                <FaMagnifyingGlass />
+              </div>
+              {/* just to hide search bar on small screens */}
+              <div className="d-block d-lg-none"></div>
+              <div class={ClassNames.nav}>
+                <a
+                  href="#"
+                  style={Styles.topNavIcons}
+                  className={ClassNames.topNavLink}
+                >
+                  <FaMagnifyingGlass size={20} />
+                </a>
+                <a
+                  href="#"
+                  style={Styles.topNavIcons}
+                  className={ClassNames.topNavLink}
+                >
+                  <FaEnvelope size={20} />
+                </a>
+                <a
+                  href="#"
+                  style={Styles.topNavIcons}
+                  className={ClassNames.topNavLink}
+                >
+                  <FaBell size={20} />
+                </a>
+                <a
+                  href="#"
+                  style={Styles.topNavIcons}
+                  className={ClassNames.topNavBurger}
+                >
+                  <FaBars size={20} />
+                </a>
+                <button class="profile-btn">
+                  <img src={defProps.image} />
+                  <span className="d-none d-md-block">&nbsp;{defProps.usernameInitial}</span>
+                </button>
+              </div>
+              {/* end hide search bar */}
+            </div>
+            {/* end navbar container */}
+          </div>
+          {/* end navbar */}
         </div>
+        {/* end main content wrapper */}
       </div>
+      {/* end main content */}
     </>
   );
 };

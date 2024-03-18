@@ -29,6 +29,7 @@ $primary: #1059ca;
 .userImage {
   &:hover {
     // hover options for profile
+    opacity: 1;
   }
 }
 .userCard {
@@ -42,20 +43,84 @@ $primary: #1059ca;
     }
   }
 }
-.sideNav{
-    margin-left: 0;
-    transition: .8s all ease-in-out;
-    display: block;
+.sideNav {
+  margin-left: 0;
+  transition: 0.8s all ease-in-out;
+  display: block;
 }
-.mainContent{
-    width: 100vw !important;
-    margin-left:0;
-    transition: .8s all ease-in-out;
+.mainContent {
+  width: 100vw !important;
+  margin-left: 0;
+  transition: 0.8s all ease-in-out;
+}
+
+.search-wrapper {
+  border-radius: 12px;
+  background-color: $white;
+  padding-right: 12px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  color: var(--light-font);
+  box-shadow: $shadow;
+  overflow: hidden;
+}
+
+.search-input {
+  border: none;
+  flex: 1;
+  outline: none;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: $white;
+  color: #1e2a37;
+  font-weight: 600;
+  &:placeholder {
+    opacity: 0.6;
+  }
+}
+.profile-btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  border-left: 2px solid $darker-90;
+
+  img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+
+  span {
+    color: #1e2a37;
+    font-size: 15px;
+    font-family: "Manrope";
+    font-weight: 700;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.topNavIcon {
+  transition: all 0.8s ease-in-out;
+  &:hover {
+    opacity: 1 !important;
+  }
 }
 @media screen and (min-width: 1200px) {
-    .mainContent{
-        margin-left: 260px !important;
-    }
+  .mainContent {
+    margin-left: 260px !important;
+  }
 }
 @media screen and (max-width: 1200px) {
   .sideNav {
