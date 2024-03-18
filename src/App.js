@@ -3,7 +3,7 @@ import "./App.css";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 import React, { useState, useRef } from 'react';
 import Layout from "./layout/"
-
+import "./styles/main.scss"
 const Styles = {
   Wrap: {
     display: "flex",
