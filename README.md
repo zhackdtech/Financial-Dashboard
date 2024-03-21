@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# React Finance Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Financial Dashboard UI project is a user interface prototype designed to provide a visually appealing and intuitive dashboard for tracking and analyzing financial data. While the project does not include backend functionality or data integration, it serves as a conceptual framework for building a comprehensive financial dashboard system.
 
-## Available Scripts
+## Key features:
 
-In the project directory, you can run:
+- Sleek Design: The dashboard UI features a modern and minimalist design, with clean layouts and intuitive navigation elements to enhance user experience.
+- Interactive Charts: Users can visualize financial metrics through interactive charts and graphs, enabling them to identify trends and patterns at a glance.
+- Customization Options: The UI includes options for users to customize the dashboard layout, select preferred metrics, and adjust visualization settings according to their preferences.
+- Responsive Design: The dashboard is designed to be responsive across various devices and screen sizes, ensuring a seamless experience whether accessed on desktops, tablets, or mobile devices.
+- Mock Data Integration: While the project does not include real-time data integration, it utilizes mock data to demonstrate the functionality of the dashboard and simulate financial scenarios.
+- Easy Integration: The UI design can serve as a foundation for integrating backend functionality and data sources, enabling developers to build a fully functional financial dashboard system.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm start`
+## Purpose:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The Financial Dashboard UI project aims to showcase the potential of a well-designed user interface for presenting financial data effectively. It serves as a starting point for developers and businesses looking to create custom financial dashboards tailored to their specific needs and requirements.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Note: This project is a frontend-only prototype and does not include backend development or real-time data integration. Developers interested in building a complete financial dashboard system are encouraged to use this UI design as a reference and extend its functionality as needed.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lists of major frameworks/libraries used in the project.
 
-### `npm run build`
+- [Chakra-UI](https://chakra-ui.com/)
+- [React.js](https://react.dev/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Sass](https://sass-lang.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React 18+ version [React](https://react.dev/)
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repo
+   ```sh
+   git clone https://github.com/zhackdtech/Financial-Dashboard.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the development server
+   ```sh
+   npm start
+   ```
+   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Roadmap
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. [x] &nbsp;Project Planning and Research:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Define project objectives, scope, and target audience.
+- Research existing financial dashboard designs and UI best practices.
+- Determine the technologies and tools to be used for UI development.
 
-## Learn More
+2. [x] &nbsp; Requirement Gathering:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Identify the key financial metrics and data visualization requirements.
+- Gather user feedback and preferences regarding dashboard layout and customization options.
+- Define the mock data structure to be used for UI prototyping.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. [x] &nbsp;Design Phase:
 
-### Code Splitting
+- Create wireframes and mockups of the dashboard UI using design tools like Adobe XD, Figma, or Sketch.
+- Design the layout, navigation elements, and visualizations to ensure clarity and usability.
+- Incorporate feedback from stakeholders and iterate on the design as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. [ ] &nbsp;Frontend Development:
 
-### Analyzing the Bundle Size
+- Set up the development environment
+- Implement the dashboard UI components based on the finalized design mockups.
+- Ensure responsiveness across various devices and screen sizes using responsive design techniques.
+- Integrate interactive chart libraries (e.g., Chart.js, D3.js) for visualizing financial data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. [ ] &nbsp;User Customization Features:
 
-### Making a Progressive Web App
+- Implement customization options for users to personalize the dashboard layout, select preferred metrics, and adjust visualization settings.
+- Develop user settings pages and functionality to manage user preferences and configurations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+6. [ ] &nbsp;Mock Data Integration:
 
-### Advanced Configuration
+- Create mock data sets representing various financial metrics and scenarios.
+- Integrate the mock data with the frontend UI to simulate real-time data visualization and analysis.
+- Implement data loading and updating mechanisms to refresh the dashboard with new mock data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+7. [ ] &nbsp;Testing and Quality Assurance:
 
-### Deployment
+- Conduct thorough testing of the dashboard UI across different browsers, devices, and screen resolutions.
+- Perform usability testing with target users to gather feedback on user experience and functionality.
+- Identify and address any bugs, performance issues, or compatibility issues.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+8. [ ] &nbsp; Documentation and Deployment:
 
-### `npm run build` fails to minify
+-Document the project including design decisions, implementation details, and usage instructions.
+-Prepare deployment packages for the frontend application.
+Deploy the Financial Dashboard UI to a hosting platform (e.g., GitHub Pages, Netlify) for public access. 9. [ ] &nbsp;Feedback Collection and Iteration:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Gather feedback from users and stakeholders after the deployment.
+  Analyze user metrics and behavior to identify areas for improvement.
+- Iterate on the dashboard UI based on feedback and insights gathered.
+
+10. [ ] &nbsp;Maintenance and Updates:
+
+- Monitor the performance and usability of the dashboard over time.
+- Provide ongoing maintenance and support, addressing any issues or feature requests as they arise.
+- Continuously update the dashboard UI to reflect changes in user needs, technologies, and design trends.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+Instagram - [@marx.wil](https://www.instagram.com/marx.wil/)
+
+Facebook - [Wilmarx D. Cayabyab](https://www.facebook.com/profile.php?id=61550879160614)
+
+LinkedIn - [Wilmarx D. Cayabyab](https://www.linkedin.com/in/wilmarx-cayabyab/)
+
+GitHub - [Wilmarx D. Cayabyab](https://github.com/zhackdtech)
+
+Project Link: [https://github.com/zhackdtech/Financial-Dashboard](https://github.com/zhackdtech/Financial-Dashboard)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Authors
+
+- [Wilmarx](https://github.com/zhackdtech/)
