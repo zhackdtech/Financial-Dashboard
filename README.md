@@ -95,8 +95,8 @@ React 18+ version [React](https://react.dev/)
 
 8. [ ] &nbsp; Documentation and Deployment:
 
--Document the project including design decisions, implementation details, and usage instructions.
--Prepare deployment packages for the frontend application.
+- Document the project including design decisions, implementation details, and usage instructions.
+- Prepare deployment packages for the frontend application.
 Deploy the Financial Dashboard UI to a hosting platform (e.g., GitHub Pages, Netlify) for public access. 9. [ ] &nbsp;Feedback Collection and Iteration:
 
 - Gather feedback from users and stakeholders after the deployment.
