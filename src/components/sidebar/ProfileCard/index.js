@@ -1,4 +1,10 @@
-import { Flex, Box, Stack, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  Stack,
+} from '@chakra-ui/react';
+
 const defProps = {
   username: "Zhack Dtech",
   email: "zhack.dtech@gmail.com",
@@ -7,7 +13,7 @@ const defProps = {
 const style = {
   ProfileCard: {
     width: "240px",
-    borderRadius: "12px",
+    // borderRadius: "12px",
     boxSizing: "border-box",
     boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
     cursor: "pointer",
@@ -66,7 +72,7 @@ function Email() {
 const ProfileCard = (props) => {
   return (
     <>
-      <Flex flexDirection="row" style={style.ProfileCard}>
+      <Flex flexDirection="row" style={style.ProfileCard} borderRadius="xl">
         <Stack direction="row" spacing="0px">
           <UserImage />
           <UserDetails />

@@ -1,40 +1,30 @@
 import {
   Box,
+  ButtonGroup,
   Flex,
   Spacer,
-  Button,
-  ButtonGroup,
-} from "@chakra-ui/react";
-import {
-  FaGear,
-  FaBars,
-  FaBell,
-  FaMagnifyingGlass,
-} from "react-icons/fa6";
-import NavSearch from "./Navsearch";
-import Nightmode from "./Nightmode";
+} from '@chakra-ui/react';
+
+import Menu from './Menu';
+import NavSearch from './Navsearch';
+import Nightmode from './Nightmode';
+import Notification from './Notification';
+import SearchMobile from './SearchMobile/';
+import Settings from './Settings';
 
 const Navbar = (props) => {
   return (
-    <Flex minWidth="max-content" alignItems="center" gap="2" pt="3">
+    <Flex minWidth="max-content" alignItems="center" gap="2" py="5" boxShadow="lg" borderRadius="xl" px="5">
       <Box>
         <NavSearch />
       </Box>
       <Spacer />
       <ButtonGroup>
-        <Button bg="transparent" hideFrom="md">
-          <FaMagnifyingGlass />
-        </Button>
-        <Button bg="transparent">
-          <FaGear />
-        </Button>
-        <Button bg="transparent">
-          <FaBell />
-        </Button>
+        <SearchMobile/>
+        <Notification/>
+        <Settings/>
         <Nightmode />
-        <Button bg="transparent" hideFrom="lg">
-          <FaBars />
-        </Button>
+        <Menu/>
       </ButtonGroup>
     </Flex>
   );

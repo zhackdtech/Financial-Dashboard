@@ -1,14 +1,13 @@
 "use client";
 import {
   Box,
-  Center,
   Flex,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-} from "@chakra-ui/react";
-import ProfileCard from "./components/sidebar/ProfileCard";
-import Navbar from "./components/navbar/"
+} from '@chakra-ui/react';
+
+import Navbar from './components/navbar/';
+import Cbreadcrumb from './components/navbar/Breadcrumb';
+import Sidebar from './components/sidebar';
+
 const style = {
   Sidebar: {
     top: "0px",
@@ -27,28 +26,10 @@ const App = (props) => {
     <>
       <Flex>
         {/* sidebar for large devices */}
-        <Box p="5" style={style.Sidebar} className="Sidenav">
-          <Center p="5">
-            <ProfileCard />
-          </Center>
-          {/* remove this comment if you don't want to use navbar search */}
-          {/* <SnSearch/> */}
-        </Box>
-        <Box style={style.MainContent} className="MainContent" px="5" pt="7">
-          <Navbar/>
-          <Breadcrumb px="5" py="5">
-            <BreadcrumbItem>
-              <BreadcrumbLink href="#">SysGo</BreadcrumbLink>
-            </BreadcrumbItem>
-
-            <BreadcrumbItem>
-              <BreadcrumbLink href="#">FD</BreadcrumbLink>
-            </BreadcrumbItem>
-
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink href="#">Dashboard</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
+        <Sidebar/>
+        <Box style={style.MainContent} className="MainContent" px="5" pt="5">
+          <Navbar />
+          <Cbreadcrumb CurrentPage="Dashboard" />
         </Box>
       </Flex>
     </>
