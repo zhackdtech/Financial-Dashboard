@@ -3,17 +3,12 @@ import {
   Box,
   Center,
   Flex,
-  Spacer,
-  Button,
-  ButtonGroup,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-// import SnSearch from "./components/sidebar/search";
 import ProfileCard from "./components/sidebar/ProfileCard";
-import { FaGear, FaBars, FaBell, FaMagnifyingGlass,FaSun  } from "react-icons/fa6";
-import NavSearch from "./components/navbar/NavSearch";
+import Navbar from "./components/navbar/"
 const style = {
   Sidebar: {
     top: "0px",
@@ -40,30 +35,8 @@ const App = (props) => {
           {/* <SnSearch/> */}
         </Box>
         <Box style={style.MainContent} className="MainContent" px="5" pt="7">
-          <Flex minWidth="max-content" alignItems="center" gap="2" pt="3">
-            <Box>
-              <NavSearch />
-            </Box>
-            <Spacer />
-            <ButtonGroup>
-              <Button bg="transparent" hideFrom="md">
-                <FaMagnifyingGlass />
-              </Button>
-              <Button bg="transparent">
-                <FaGear />
-              </Button>
-              <Button bg="transparent">
-                <FaBell />
-              </Button>
-              <Button bg="transparent">
-                <FaSun  />
-              </Button>
-              <Button bg="transparent" hideFrom="lg">
-                <FaBars />
-              </Button>
-            </ButtonGroup>
-          </Flex>
-          <Breadcrumb px="4" py="5">
+          <Navbar/>
+          <Breadcrumb px="5" py="5">
             <BreadcrumbItem>
               <BreadcrumbLink href="#">SysGo</BreadcrumbLink>
             </BreadcrumbItem>
