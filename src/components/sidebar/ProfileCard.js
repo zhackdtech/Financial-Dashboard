@@ -1,6 +1,6 @@
-import { Flex, Box, Grid, Stack, Center } from "@chakra-ui/react";
+import { Flex, Box, Stack, Center } from "@chakra-ui/react";
 const defProps = {
-  username: "Zhack D",
+  username: "Zhack Dtech",
   email: "zhack.dtech@gmail.com",
   image: "https://avatars.githubusercontent.com/u/50767502?v=4",
 };
