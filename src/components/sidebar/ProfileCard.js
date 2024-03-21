@@ -1,0 +1,78 @@
+import { Flex, Box, Grid, Stack, Center } from "@chakra-ui/react";
+const defProps = {
+  username: "Zhack D",
+  email: "zhack.dtech@gmail.com",
+  image: "https://avatars.githubusercontent.com/u/50767502?v=4",
+};
+const style = {
+  ProfileCard: {
+    width: "240px",
+    borderRadius: "12px",
+    boxSizing: "border-box",
+    boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
+    cursor: "pointer",
+  },
+  UserText: {
+    fontSize: "14px",
+    fontFamily: "Manrope",
+    fontWeight: 700,
+    padding: "3px 0 0 0",
+    // lineHeight: '18px',
+  },
+  EmailText: {
+    fontSize: "12px",
+    fontFamily: "Manrope",
+    fontWeight: "500",
+    lineHeight: "10px",
+    padding: "3px 0 0 0",
+  },
+  ImageContainer: {
+    top: "32px",
+    left: "24px",
+    width: "45px",
+    height: "45px",
+    borderRadius: "100000px",
+    border: "1px solid #e5e5e5",
+    boxSizing: "border-box",
+    boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${defProps.image})`,
+    cursor: "pointer",
+  },
+};
+function UserDetails({ title, desc, ...rest }) {
+  return (
+    <Box p={5} {...rest}>
+      <Username />
+      <Email />
+    </Box>
+  );
+}
+function UserImage() {
+  return (
+    <Center pl="4">
+      <Box style={style.ImageContainer} />
+    </Center>
+  );
+}
+function Username() {
+  return <div style={style.UserText}>{defProps.username}</div>;
+}
+function Email() {
+  return <div style={style.EmailText}>{defProps.email}</div>;
+}
+const ProfileCard = (props) => {
+  return (
+    <>
+      <Flex flexDirection="row" style={style.ProfileCard}>
+        <Stack direction="row" spacing="0px">
+          <UserImage />
+          <UserDetails />
+        </Stack>
+      </Flex>
+    </>
+  );
+};
+export default ProfileCard;
