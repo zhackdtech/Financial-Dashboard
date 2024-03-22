@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import {
   FaBell,
   FaInbox,
+  FaRegSun,
 } from 'react-icons/fa6';
 import routes from 'routes.js';
 
@@ -21,6 +22,7 @@ import {
   MenuItem,
   MenuList,
   Text,
+  useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
 
@@ -31,15 +33,12 @@ export default function HeaderLinks(props) {
   let menuBg = useColorModeValue("white", "navy.800");
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const textColorBrand = useColorModeValue("brand.700", "brand.400");
-  const ethColor = useColorModeValue("gray.700", "white");
   const borderColor = useColorModeValue("#E6ECFA", "rgba(135, 140, 189, 0.3)");
-  const ethBg = useColorModeValue("secondaryGray.300", "navy.900");
-  const ethBox = useColorModeValue("white", "navy.800");
   const shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.18)",
     "14px 17px 40px 4px rgba(112, 144, 176, 0.06)"
   );
-  const borderButton = useColorModeValue("secondaryGray.500", "whiteAlpha.200");
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
       w={{ sm: "100%", md: "auto" }}
@@ -57,6 +56,18 @@ export default function HeaderLinks(props) {
         borderRadius="30px"
       />
       <SidebarResponsive routes={routes} />
+      <Menu>
+        <MenuButton p="0px" onClick={toggleColorMode}>
+          <Icon
+            mt="6px"
+            as={FaRegSun}
+            color={navbarIcon}
+            w="18px"
+            h="18px"
+            me="10px"
+          />
+        </MenuButton>
+      </Menu>
       <Menu>
         <MenuButton p="0px">
           <Icon
@@ -163,7 +174,6 @@ export default function HeaderLinks(props) {
           </Flex>
         </MenuList>
       </Menu>
-
       <Menu>
         <MenuButton p="0px">
           <Avatar
