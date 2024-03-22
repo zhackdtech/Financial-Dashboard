@@ -22,6 +22,7 @@ Note: This project is a frontend-only prototype and does not include backend dev
 
 Lists of major frameworks/libraries used in the project.
 
+- [Horizon-UI](https://horizon-ui.com/)
 - [Chakra-UI](https://chakra-ui.com/)
 - [React.js](https://react.dev/)
 - [Framer Motion](https://www.framer.com/motion/)
