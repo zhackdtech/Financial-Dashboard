@@ -114,7 +114,7 @@ export default function HeaderLinks(props) {
         <MenuButton p="0px">
           <Icon
             mt="6px"
-            as={FaInbox }
+            as={FaInbox}
             color={navbarIcon}
             w="18px"
             h="18px"
