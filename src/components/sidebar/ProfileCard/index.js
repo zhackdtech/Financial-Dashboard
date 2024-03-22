@@ -13,10 +13,10 @@ const defProps = {
 const style = {
   ProfileCard: {
     width: "240px",
-    // borderRadius: "12px",
     boxSizing: "border-box",
     boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
     cursor: "pointer",
+    // border:"1px solid #432CF4",
   },
   UserText: {
     fontSize: "14px",

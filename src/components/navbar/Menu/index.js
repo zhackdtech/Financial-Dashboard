@@ -15,6 +15,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
+import Links from '../../sidebar/Links';
 import ProfileCard from '../../sidebar/ProfileCard';
 
 const style = {
@@ -33,6 +34,7 @@ function Sidebar() {
       </Center>
       {/* remove this comment if you don't want to use navbar search */}
       {/* <SnSearch/> */}
+      <Links />
     </Box>
   );
 }
@@ -41,7 +43,12 @@ const Menu = (props) => {
   const btnRef = React.useRef();
   return (
     <>
-      <Button bg="transparent" className="MenuButton" onClick={onOpen} hideFrom="xl">
+      <Button
+        bg="transparent"
+        className="MenuButton"
+        onClick={onOpen}
+        hideFrom="xl"
+      >
         <FaBars />
       </Button>
       <Drawer

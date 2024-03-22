@@ -4,6 +4,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 
+import Links from './Links';
 import ProfileCard from './ProfileCard';
 
 const style = {
@@ -24,6 +25,7 @@ const Sidebar = (props) => {
       </Center>
       {/* remove this comment if you don't want to use navbar search */}
       {/* <SnSearch/> */}
+      <Links />
     </Box>
   );
 };
