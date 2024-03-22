@@ -12,7 +12,7 @@ const defProps = {
 };
 const style = {
   ProfileCard: {
-    width: "240px",
+    width: "260px",
     boxSizing: "border-box",
     boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
     cursor: "pointer",
@@ -20,14 +20,14 @@ const style = {
   },
   UserText: {
     fontSize: "14px",
-    fontFamily: "Manrope",
+    // fontFamily: "Manrope",
     fontWeight: 700,
     padding: "3px 0 0 0",
     // lineHeight: '18px',
   },
   EmailText: {
     fontSize: "12px",
-    fontFamily: "Manrope",
+    // fontFamily: "Manrope",
     fontWeight: "500",
     lineHeight: "10px",
     padding: "3px 0 0 0",
