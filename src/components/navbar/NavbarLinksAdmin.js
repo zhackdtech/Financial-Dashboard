@@ -8,7 +8,8 @@ import PropTypes from 'prop-types';
 import {
   FaBell,
   FaInbox,
-  FaRegSun,
+  FaMoon,
+  FaSun,
 } from 'react-icons/fa6';
 import routes from 'routes.js';
 
@@ -58,14 +59,25 @@ export default function HeaderLinks(props) {
       <SidebarResponsive routes={routes} />
       <Menu>
         <MenuButton p="0px" onClick={toggleColorMode}>
-          <Icon
-            mt="6px"
-            as={FaRegSun}
-            color={navbarIcon}
-            w="18px"
-            h="18px"
-            me="10px"
-          />
+          {colorMode === 'light' ? (
+            <Icon
+              mt="6px"
+              as={FaSun }
+              color={navbarIcon}
+              w="18px"
+              h="18px"
+              me="10px"
+            />
+          ) : (
+            <Icon
+              mt="6px"
+              as={FaMoon}
+              color={navbarIcon}
+              w="18px"
+              h="18px"
+              me="10px"
+            />
+          )}
         </MenuButton>
       </Menu>
       <Menu>
