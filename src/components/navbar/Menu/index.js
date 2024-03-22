@@ -41,7 +41,7 @@ const Menu = (props) => {
   const btnRef = React.useRef();
   return (
     <>
-      <Button bg="transparent" hideFrom="lg" onClick={onOpen}>
+      <Button bg="transparent" className="MenuButton" onClick={onOpen} hideFrom="xl">
         <FaBars />
       </Button>
       <Drawer

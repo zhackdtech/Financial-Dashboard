@@ -38,9 +38,7 @@ const style = {
     width: "45px",
     height: "45px",
     borderRadius: "100000px",
-    border: "1px solid #e5e5e5",
     boxSizing: "border-box",
-    boxShadow: "0px 2px 8px rgba(0,0,0,0.16)",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -74,7 +72,7 @@ const ProfileCard = (props) => {
     <>
       <Flex flexDirection="row" style={style.ProfileCard} borderRadius="xl">
         <Stack direction="row" spacing="0px">
-          <UserImage />
+          <UserImage boxShadow="lg"/>
           <UserDetails />
         </Stack>
       </Flex>

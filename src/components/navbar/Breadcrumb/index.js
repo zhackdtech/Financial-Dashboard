@@ -5,9 +5,15 @@ import {
   BreadcrumbLink,
 } from '@chakra-ui/react';
 
+const style={
+  Breadcrumbs:{
+    fontWeight:"600",
+    fontFamily:"Manrope"
+  }
+}
 const Cbreadcrumb = (props) => {
   return (
-    <Breadcrumb py="5">
+    <Breadcrumb py="5" px="1" style={style.Breadcrumbs}>
       <BreadcrumbItem>
         <BreadcrumbLink href="#">SysGo</BreadcrumbLink>
       </BreadcrumbItem>

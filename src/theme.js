@@ -1,15 +1,18 @@
-// theme.js
-
-// 1. import `extendTheme` function
 import { extendTheme } from '@chakra-ui/react'
+import foundations from './foundations'
 
-// 2. Add your color mode config
+const direction = 'ltr'
+
 const config = {
+  useSystemColorMode: false,
   initialColorMode: 'light',
-  useSystemColorMode: true,
+  cssVarPrefix: 'chakra',
 }
 
-// 3. extend the theme
-const theme = extendTheme({ config })
+export const theme = {
+  direction,
+  ...foundations,
+  config,
+}
 
-export default theme
+export default extendTheme(theme)
