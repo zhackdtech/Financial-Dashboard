@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fa6';
 // Admin Imports
 import MainDashboard from 'views/admin/dashboard';
+import DefaultHorizon from 'views/admin/default';
 
 import { Icon } from '@chakra-ui/react';
 
@@ -25,7 +26,7 @@ const routes = [
     layout: "/admin",
     path: "/tables",
     icon: <Icon as={FaTable} width="20px" height="20px" color="inherit" />,
-    component: MainDashboard,
+    component: DefaultHorizon,
   },
   {
     name: "Pages",

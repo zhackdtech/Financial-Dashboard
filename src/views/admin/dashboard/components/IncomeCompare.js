@@ -1,3 +1,15 @@
+import React from 'react';
+
+// Custom components
+import Card from 'components/card/Card.js';
+import LineChart from 'components/charts/LineChart';
+import {
+  FaArrowDown,
+  FaArrowUp,
+  FaCalendar,
+  FaChartColumn,
+} from 'react-icons/fa6';
+
 // Chakra imports
 import {
   Box,
@@ -6,21 +18,14 @@ import {
   Icon,
   Text,
   useColorModeValue,
-} from "@chakra-ui/react";
-// Custom components
-import Card from "components/card/Card.js";
-import LineChart from "components/charts/LineChart";
-import React from "react";
-import { IoCheckmarkCircle } from "react-icons/io5";
-import { MdBarChart, MdOutlineCalendarToday } from "react-icons/md";
-// Assets
-import { RiArrowUpSFill } from "react-icons/ri";
-import {
-  lineChartDataTotalSpent,
-  lineChartOptionsTotalSpent,
-} from "variables/charts";
+} from '@chakra-ui/react';
 
-export default function TotalSpent(props) {
+import {
+  incomeCompareData,
+  incomeCompareOptions,
+} from '../variables/';
+
+export default function IncomeCompare(props) {
   const { ...rest } = props;
 
   // Chakra Color Mode
@@ -55,11 +60,11 @@ export default function TotalSpent(props) {
             color={textColorSecondary}
             borderRadius='7px'>
             <Icon
-              as={MdOutlineCalendarToday}
+              as={FaCalendar }
               color={textColorSecondary}
               me='4px'
             />
-            This month
+            March 2024
           </Button>
           <Button
             ms='auto'
@@ -74,7 +79,7 @@ export default function TotalSpent(props) {
             lineHeight='100%'
             borderRadius='10px'
             {...rest}>
-            <Icon as={MdBarChart} color={iconColor} w='24px' h='24px' />
+            <Icon as={FaChartColumn} color={iconColor} w='24px' h='24px' />
           </Button>
         </Flex>
       </Flex>
@@ -86,7 +91,7 @@ export default function TotalSpent(props) {
             textAlign='start'
             fontWeight='700'
             lineHeight='100%'>
-            $37.5K
+            ₱ 3.4k
           </Text>
           <Flex align='center' mb='20px'>
             <Text
@@ -95,27 +100,36 @@ export default function TotalSpent(props) {
               fontWeight='500'
               mt='4px'
               me='12px'>
-              Total Spent
+              Net
             </Text>
             <Flex align='center'>
-              <Icon as={RiArrowUpSFill} color='green.500' me='2px' mt='2px' />
-              <Text color='green.500' fontSize='sm' fontWeight='700'>
-                +2.45%
+              <Text color={props.netGrowth <0 ? "red.500" : "green.500"} fontSize='sm' fontWeight='700'>
+                {props.netGrowth+"%"}
+              <Icon as={props.netGrowth <0 ? FaArrowDown : FaArrowUp} color={props.netGrowth <0 ? "red.500" : "green.500"} me='2px' mt='2px' />
               </Text>
             </Flex>
           </Flex>
-
-          <Flex align='center'>
-            <Icon as={IoCheckmarkCircle} color='green.500' me='4px' />
-            <Text color='green.500' fontSize='md' fontWeight='700'>
-              On track
+          <Flex align='center' mb='20px'>
+            <Text
+              color='secondaryGray.600'
+              fontSize='sm'
+              fontWeight='500'
+              mt='4px'
+              me='12px'>
+              Gross
             </Text>
+            <Flex align='center'>
+              <Text color={props.grossGrowth <0 ? "red.500" : "green.500"} fontSize='sm' fontWeight='700'>
+                {props.grossGrowth+"%"}
+              <Icon as={props.grossGrowth <0 ? FaArrowDown : FaArrowUp} color={props.grossGrowth <0 ? "red.500" : "green.500"} me='2px' mt='2px' />
+              </Text>
+            </Flex>
           </Flex>
         </Flex>
         <Box minH='260px' minW='75%' mt='auto'>
           <LineChart
-            chartData={lineChartDataTotalSpent}
-            chartOptions={lineChartOptionsTotalSpent}
+            chartData={incomeCompareData}
+            chartOptions={incomeCompareOptions}
           />
         </Box>
       </Flex>
