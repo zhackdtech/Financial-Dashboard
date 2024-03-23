@@ -1,3 +1,9 @@
+// Custom icons
+import React from 'react';
+
+// Custom components
+import Card from 'components/card/Card.js';
+
 // Chakra imports
 // Chakra imports
 import {
@@ -5,13 +11,9 @@ import {
   Stat,
   StatLabel,
   StatNumber,
-  useColorModeValue,
   Text,
-} from "@chakra-ui/react";
-// Custom components
-import Card from "components/card/Card.js";
-// Custom icons
-import React from "react";
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 export default function Default(props) {
   const { startContent, endContent, name, growth, value } = props;
@@ -45,8 +47,8 @@ export default function Default(props) {
           </StatNumber>
           {growth ? (
             <Flex align='center'>
-              <Text color='green.500' fontSize='xs' fontWeight='700' me='5px'>
-                {growth}
+              <Text color={ growth < 0 ? "red.500" : "green.500"} fontSize='xs' fontWeight='700' me='5px'>
+                {growth+"%"}
               </Text>
               <Text color='secondaryGray.600' fontSize='xs' fontWeight='400'>
                 since last month
