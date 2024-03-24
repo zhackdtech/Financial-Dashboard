@@ -1,3 +1,4 @@
+<a id="top"></a>
 # React Finance Dashboard
 ![Mockup](https://raw.githubusercontent.com/zhackdtech/Financial-Dashboard/main/Mockup.jpg)
 The Financial Dashboard UI project is a user interface prototype designed to provide a visually appealing and intuitive dashboard for tracking and analyzing financial data. While the project does not include backend functionality or data integration, it serves as a conceptual framework for building a comprehensive financial dashboard system.
@@ -10,7 +11,7 @@ The Financial Dashboard UI project is a user interface prototype designed to pro
 - Responsive Design: The dashboard is designed to be responsive across various devices and screen sizes, ensuring a seamless experience whether accessed on desktops, tablets, or mobile devices.
 - Mock Data Integration: While the project does not include real-time data integration, it utilizes mock data to demonstrate the functionality of the dashboard and simulate financial scenarios.
 - Easy Integration: The UI design can serve as a foundation for integrating backend functionality and data sources, enabling developers to build a fully functional financial dashboard system.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Purpose:
 
@@ -28,7 +29,7 @@ Lists of major frameworks/libraries used in the project.
 - [Framer Motion](https://www.framer.com/motion/)
 - [Sass](https://sass-lang.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Prerequisites
 
@@ -48,7 +49,7 @@ React 18+ version [React](https://react.dev/)
    ```sh
    npm start
    ```
-   <p align="right">(<a href="#readme-top">back to top</a>)</p>
+   <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Roadmap
 
@@ -110,13 +111,13 @@ Deploy the Financial Dashboard UI to a hosting platform (e.g., GitHub Pages, Net
 - Provide ongoing maintenance and support, addressing any issues or feature requests as they arise.
 - Continuously update the dashboard UI to reflect changes in user needs, technologies, and design trends.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contact
 
@@ -130,7 +131,7 @@ GitHub - [Wilmarx D. Cayabyab](https://github.com/zhackdtech)
 
 Project Link: [https://github.com/zhackdtech/Financial-Dashboard](https://github.com/zhackdtech/Financial-Dashboard)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Authors
 
