@@ -1,5 +1,5 @@
 # React Finance Dashboard
-
+![Mockup](https://raw.githubusercontent.com/zhackdtech/Financial-Dashboard/main/Mockup.jpg)
 The Financial Dashboard UI project is a user interface prototype designed to provide a visually appealing and intuitive dashboard for tracking and analyzing financial data. While the project does not include backend functionality or data integration, it serves as a conceptual framework for building a comprehensive financial dashboard system.
 
 ## Key features:
