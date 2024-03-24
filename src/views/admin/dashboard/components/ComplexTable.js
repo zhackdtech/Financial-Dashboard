@@ -1,8 +1,24 @@
+import React, { useMemo } from 'react';
+
+// Custom components
+import Card from 'components/card/Card';
+// Assets
+import {
+  MdCancel,
+  MdCheckCircle,
+  MdOutlineError,
+} from 'react-icons/md';
+import {
+  useGlobalFilter,
+  usePagination,
+  useSortBy,
+  useTable,
+} from 'react-table';
+
 import {
   Flex,
-  Table,
-  Progress,
   Icon,
+  Table,
   Tbody,
   Td,
   Text,
@@ -10,21 +26,8 @@ import {
   Thead,
   Tr,
   useColorModeValue,
-} from "@chakra-ui/react";
-import React, { useMemo } from "react";
-import {
-  useGlobalFilter,
-  usePagination,
-  useSortBy,
-  useTable,
-} from "react-table";
+} from '@chakra-ui/react';
 
-// Custom components
-import Card from "components/card/Card";
-import Menu from "components/menu/MainMenu";
-
-// Assets
-import { MdCheckCircle, MdCancel, MdOutlineError } from "react-icons/md";
 export default function ColumnsTable(props) {
   const { columnsData, tableData } = props;
 
@@ -65,9 +68,8 @@ export default function ColumnsTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          Complex Table
+          March expenses
         </Text>
-        <Menu />
       </Flex>
       <Table {...getTableProps()} variant='simple' color='gray.500' mb='24px'>
         <Thead>
@@ -114,7 +116,7 @@ export default function ColumnsTable(props) {
                           color={
                             cell.value === "Approved"
                               ? "green.500"
-                              : cell.value === "Disable"
+                              : cell.value === "Declined"
                               ? "red.500"
                               : cell.value === "Error"
                               ? "orange.500"
@@ -123,16 +125,16 @@ export default function ColumnsTable(props) {
                           as={
                             cell.value === "Approved"
                               ? MdCheckCircle
-                              : cell.value === "Disable"
+                              : cell.value === "Declined"
                               ? MdCancel
                               : cell.value === "Error"
                               ? MdOutlineError
                               : null
                           }
                         />
-                        <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {/* <Text color={textColor} fontSize='sm' fontWeight='700'>
                           {cell.value}
-                        </Text>
+                        </Text> */}
                       </Flex>
                     );
                   } else if (cell.column.Header === "DATE") {
@@ -141,19 +143,20 @@ export default function ColumnsTable(props) {
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } 
+                  else if (cell.column.Header === "BALANCE") {
                     data = (
-                      <Flex align='center'>
-                        <Progress
-                          variant='table'
-                          colorScheme='brandScheme'
-                          h='8px'
-                          w='108px'
-                          value={cell.value}
-                        />
-                      </Flex>
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
                     );
-                  }
+                  } else if (cell.column.Header === "TOTAL") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  } 
                   return (
                     <Td
                       {...cell.getCellProps()}

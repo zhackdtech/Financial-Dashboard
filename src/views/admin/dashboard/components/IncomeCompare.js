@@ -44,7 +44,7 @@ export default function IncomeCompare(props) {
       mb="0px"
       {...rest}
     >
-      <Flex justify="space-between" ps="0px" pe="20px" align="center">
+      <Flex justify="space-between" ps="0px" pe="20px" pt="5px" align="center">
         <Text
           me="auto"
           color={textColor}
