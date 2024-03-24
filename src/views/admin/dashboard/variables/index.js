@@ -8,7 +8,6 @@ export const incomeCompareData = [
     data: [1300, 1400, 1240, 1460, 1200, 1460],
   },
 ];
-
 export const incomeCompareOptions = {
   chart: {
     toolbar: {
@@ -80,4 +79,44 @@ export const incomeCompareOptions = {
     },
   },
   color: ["#7551FF", "#39B8FF"],
+};
+
+export const pieChartData = [1500,700];
+export const pieChartOptions = {
+  labels: ["Gross", "Expenses"],
+  colors: ["#48BB78", "#ED8936"],
+  chart: {
+    width: "50px",
+  },
+  states: {
+    hover: {
+      filter: {
+        type: "none",
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  hover: { mode: null },
+  plotOptions: {
+    donut: {
+      expandOnClick: false,
+      donut: {
+        labels: {
+          show: false,
+        },
+      },
+    },
+  },
+  fill: {
+    colors: ["#48BB78", "#ED8936"],
+  },
+  tooltip: {
+    enabled: true,
+    theme: "dark",
+  },
 };

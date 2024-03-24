@@ -50,16 +50,6 @@ export default function Footer() {
           >
             Zhack
           </Link>
-          on top of
-          <Link
-            mx="3px"
-            color={textColor}
-            href="#"
-            target="_blank"
-            fontWeight="700"
-          >
-            Horizon UI
-          </Link>
         </Text>
       </Text>
       <List display="flex">
