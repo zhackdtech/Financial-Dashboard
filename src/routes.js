@@ -29,9 +29,9 @@ const routes = [
     component: Tables,
   },
   {
-    name: "Pages",
+    name: "Components",
     layout: "/admin",
-    path: "/pages",
+    path: "/components",
     icon: (
       <Icon
         as={FaTabletScreenButton}
