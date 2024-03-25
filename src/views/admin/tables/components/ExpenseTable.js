@@ -2,6 +2,12 @@ import React, { useMemo } from 'react';
 
 // Custom components
 import Card from 'components/card/Card';
+// Assets
+import {
+  MdCancel,
+  MdCheckCircle,
+  MdOutlineError,
+} from 'react-icons/md';
 import {
   useGlobalFilter,
   usePagination,
@@ -11,6 +17,7 @@ import {
 
 import {
   Flex,
+  Icon,
   Table,
   Tbody,
   Td,
@@ -21,7 +28,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-export default function IOTable(props) {
+export default function Expensetable(props) {
   const { columnsData, tableData } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
@@ -61,7 +68,7 @@ export default function IOTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-            {props.heading}
+          March expenses
         </Text>
       </Flex>
       <Table {...getTableProps()} variant='simple' color='gray.500' mb='24px'>
@@ -94,6 +101,50 @@ export default function IOTable(props) {
                 {row.cells.map((cell, index) => {
                   let data = "";
                   if (cell.column.Header === "NAME") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  } else if (cell.column.Header === "STATUS") {
+                    data = (
+                      <Flex align='center'>
+                        <Icon
+                          w='24px'
+                          h='24px'
+                          me='5px'
+                          color={
+                            cell.value === "Approved"
+                              ? "green.500"
+                              : cell.value === "Declined"
+                              ? "red.500"
+                              : cell.value === "Error"
+                              ? "orange.500"
+                              : null
+                          }
+                          as={
+                            cell.value === "Approved"
+                              ? MdCheckCircle
+                              : cell.value === "Declined"
+                              ? MdCancel
+                              : cell.value === "Error"
+                              ? MdOutlineError
+                              : null
+                          }
+                        />
+                        {/* <Text color={textColor} fontSize='sm' fontWeight='700'>
+                          {cell.value}
+                        </Text> */}
+                      </Flex>
+                    );
+                  } else if (cell.column.Header === "DATE") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  } 
+                  else if (cell.column.Header === "BALANCE") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}

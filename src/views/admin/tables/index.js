@@ -28,6 +28,8 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 
+import ExpenseTable from './components/ExpenseTable';
+import IOTable from './components/IOTable.js';
 import TransactionTables from './components/Transactions';
 import UserTable from './components/UserTable';
 
@@ -117,6 +119,103 @@ const tableDataTransactions = [
     status: "Failed",
   },
 ];
+const columnsDataOutcome = [
+  {
+    Header: "NAME",
+    accessor: "name",
+  },
+  {
+    Header: "TOTAL",
+    accessor: "total",
+  },
+];
+const tableDataOutcome = [
+  {
+    name: "SMS API",
+    total: "$120.00",
+  },
+  {
+    name: "Hosting Site",
+    total: "$160.00",
+  },
+];
+
+const columnsDataIncome = [
+  {
+    Header: "NAME",
+    accessor: "name",
+  },
+  {
+    Header: "TOTAL",
+    accessor: "total",
+  },
+];
+const tableDataIncome = [
+  {
+    name: "SysGo DEMS",
+    total: "$420.00",
+  },
+  {
+    name: "SysGo TM",
+    total: "$320.00",
+  },
+  {
+    name: "SysGo FD",
+    total: "$520.00",
+  },
+];
+const columnsDataExpenses = [
+  {
+    Header: "NAME",
+    accessor: "name",
+  },
+  {
+    Header: "STATUS",
+    accessor: "status",
+  },
+  {
+    Header: "DATE",
+    accessor: "date",
+  },
+  {
+    Header: "TOTAL",
+    accessor: "total",
+  },
+  {
+    Header: "BALANCE",
+    accessor: "balance",
+  },
+];
+const tableDataExpenses = [
+  {
+    name: "Github Enterprise",
+    status: "Approved",
+    date: "23 Mar, 2024",
+    total: "$19.25",
+    balance: "$0.00",
+  },
+  {
+    name: "Office 365",
+    status: "Declined",
+    date: "13 Mar, 2024",
+    total: "$469.00",
+    balance: "$120.00",
+  },
+  {
+    name: "Visual Studio Enterprise",
+    status: "Declined",
+    date: "21 Feb, 2024",
+    total: "$250.00",
+    balance: "$10.00",
+  },
+  {
+    name: "Minecraft",
+    status: "Approved",
+    date: "2 Jan, 2024",
+    total: "$39.99",
+    balance: "$0.00",
+  },
+];
 export default function Settings() {
   // Chakra Color Mode
   return (
@@ -136,6 +235,25 @@ export default function Settings() {
           tableData={tableDataTransactions}
           tableName="Transactions"
         />
+      </SimpleGrid>
+      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
+        <ExpenseTable
+          columnsData={columnsDataExpenses}
+          tableData={tableDataExpenses}
+        />
+        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
+          {/* charts here */}
+          <IOTable
+            heading="Income"
+            columnsData={columnsDataIncome}
+            tableData={tableDataIncome}
+          />
+          <IOTable
+            heading="Outcome"
+            columnsData={columnsDataOutcome}
+            tableData={tableDataOutcome}
+          />
+        </SimpleGrid>
       </SimpleGrid>
     </Box>
   );

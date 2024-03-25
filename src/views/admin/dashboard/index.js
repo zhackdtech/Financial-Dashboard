@@ -37,7 +37,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import ComplexTable from './components/ComplexTable';
+import ComplexTable from './components/ExpenseTable';
 import IncomeCompare from './components/IncomeCompare';
 import IOTable from './components/IOTable';
 import PieCard from './components/PieCard';

@@ -34,7 +34,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-export default function UserTable(props) {
+export default function TransactionTable(props) {
   let dropdownBtnBg = useColorModeValue("brand.100", "brand.500");
   let dropdownBtnColor = useColorModeValue("brand.500", "brand.100");
   const { columnsData, tableData } = props;
