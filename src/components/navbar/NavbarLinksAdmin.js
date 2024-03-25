@@ -59,25 +59,14 @@ export default function HeaderLinks(props) {
       <SidebarResponsive routes={routes} />
       <Menu>
         <MenuButton p="0px" onClick={toggleColorMode}>
-          {colorMode === 'light' ? (
             <Icon
               mt="6px"
-              as={FaSun }
+              as={colorMode === 'light' ? FaMoon : FaSun }
               color={navbarIcon}
               w="18px"
               h="18px"
               me="10px"
             />
-          ) : (
-            <Icon
-              mt="6px"
-              as={FaMoon}
-              color={navbarIcon}
-              w="18px"
-              h="18px"
-              me="10px"
-            />
-          )}
         </MenuButton>
       </Menu>
       <Menu>
