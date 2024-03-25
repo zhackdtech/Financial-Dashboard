@@ -34,6 +34,7 @@ export default function IncomeCompare(props) {
 
   // Chakra Color Mode
   let dropdownBtnBg = useColorModeValue("brand.100", "brand.500");
+  let dropdownBtnColor = useColorModeValue("brand.500","brand.100");
   const textColor = useColorModeValue("secondaryGray.900", "white");
   return (
     <Card
@@ -60,6 +61,7 @@ export default function IncomeCompare(props) {
             rightIcon={<FaAngleDown />}
             borderRadius="lg"
             bg={dropdownBtnBg}
+            color={dropdownBtnColor}
           >
             Dropdown
           </MenuButton>
