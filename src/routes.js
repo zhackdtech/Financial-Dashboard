@@ -2,10 +2,10 @@ import React from 'react';
 
 import {
   FaChartArea,
+  FaChartPie,
   FaCircleUser,
   FaGear,
   FaTable,
-  FaTabletScreenButton,
 } from 'react-icons/fa6';
 // Admin Imports
 import MainDashboard from 'views/admin/dashboard';
@@ -34,7 +34,7 @@ const routes = [
     path: "/charts",
     icon: (
       <Icon
-        as={FaTabletScreenButton}
+        as={FaChartPie}
         width="20px"
         height="20px"
         color="inherit"
