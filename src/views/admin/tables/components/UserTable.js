@@ -36,6 +36,7 @@ import {
 
 export default function UserTable(props) {
   let dropdownBtnBg = useColorModeValue("brand.100", "brand.500");
+  let dropdownBtnColor = useColorModeValue("brand.500","brand.100");
   const { columnsData, tableData } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
@@ -85,6 +86,7 @@ export default function UserTable(props) {
             rightIcon={<FaAngleDown />}
             borderRadius="lg"
             bg={dropdownBtnBg}
+            color={dropdownBtnColor}
           >
             Dropdown
           </MenuButton>
