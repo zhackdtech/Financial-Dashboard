@@ -11,6 +11,7 @@ import {
   Box,
   Flex,
   HStack,
+  IconButton,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -91,7 +92,7 @@ export function SidebarLinks(props) {
                       activeRoute(route.path.toLowerCase()) ? "lg" : ""
                     }
                   >
-                    <Box
+                    {/* <Box
                       borderRadius="lg"
                       color={
                         activeRoute(route.path.toLowerCase())
@@ -107,7 +108,39 @@ export function SidebarLinks(props) {
                       }
                     >
                       {route.icon}
-                    </Box>
+                    </Box> */}
+                    <IconButton
+                      _hover={{
+                        bg: activeRoute(route.path.toLowerCase())
+                          ? activeIconBg
+                          : inactiveIconBg,
+                        color: activeRoute(route.path.toLowerCase())
+                          ? activeIcon
+                          : inactiveIcon,
+                      }}
+                      _clicked={{
+                        border: "none",
+                        bg: activeRoute(route.path.toLowerCase())
+                          ? activeIconBg
+                          : inactiveIconBg,
+                        color: activeRoute(route.path.toLowerCase())
+                          ? activeIcon
+                          : inactiveIcon,
+                      }}
+                      _focus={{ boxShadow: "outline" }}
+                      color={
+                        activeRoute(route.path.toLowerCase())
+                          ? activeIcon
+                          : inactiveIcon
+                      }
+                      bg={
+                        activeRoute(route.path.toLowerCase())
+                          ? activeIconBg
+                          : inactiveIconBg
+                      }
+                      aria-label={route.name}
+                      icon={route.icon}
+                    />
                     &nbsp;
                     <Text
                       me="auto"
