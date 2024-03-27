@@ -20,6 +20,11 @@
 
 */
 
+import {
+  FaMoneyBillWave,
+  FaMoneyCheckDollar,
+} from 'react-icons/fa6';
+
 // Chakra imports
 import {
   Box,
@@ -27,6 +32,7 @@ import {
 } from '@chakra-ui/react';
 
 import BarChartSecond from './components/BarChart2';
+import BudgetCard from './components/BudgetCard';
 import IncomeBar from './components/IncomeBar';
 import IncomeCompare from './components/IncomeCompare';
 import PieCard from './components/PieCard';
@@ -87,8 +93,26 @@ export default function UserReports() {
             <PieCard pieChartData={pieChartData} />
           </SimpleGrid>
         </SimpleGrid>
-        <SimpleGrid>
-          <BarChartSecond barChartDataConsumption={barChartSecondDataConsumption} />
+        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
+          <BarChartSecond
+            barChartDataConsumption={barChartSecondDataConsumption}
+          />
+          <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
+            <BudgetCard
+              header="Current Budget"
+              sub="Lorem ipsum dolor sit amet"
+              icon={FaMoneyCheckDollar}
+              used="100"
+              max="1000"
+            />
+            <BudgetCard
+              header="Personal Budget"
+              sub="Lorem ipsum dolor sit amet"
+              icon={FaMoneyBillWave }
+              used="230"
+              max="1190"
+            />
+          </SimpleGrid>
         </SimpleGrid>
       </Box>
     </>
