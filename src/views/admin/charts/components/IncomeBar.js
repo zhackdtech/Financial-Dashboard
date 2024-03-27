@@ -111,7 +111,7 @@ export const barChartOptionsDailyTraffic = {
     },
   },
 };
-export default function DailyTraffic(props) {
+export default function IncomeBar(props) {
   const { ...rest } = props;
 
   // Chakra Color Mode

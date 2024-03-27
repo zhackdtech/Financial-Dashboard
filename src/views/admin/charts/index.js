@@ -26,6 +26,7 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 
+import BarChartSecond from './components/BarChart2';
 import IncomeBar from './components/IncomeBar';
 import IncomeCompare from './components/IncomeCompare';
 import PieCard from './components/PieCard';
@@ -47,6 +48,21 @@ const barChartDataDailyTraffic = [
   },
 ];
 const pieChartData = [1500, 700];
+
+const barChartSecondDataConsumption = [
+  {
+    name: "PRODUCT A",
+    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+  },
+  {
+    name: "PRODUCT B",
+    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+  },
+  {
+    name: "PRODUCT C",
+    data: [500, 370, 330, 390, 320, 350, 360, 320, 380],
+  },
+];
 export default function UserReports() {
   return (
     <>
@@ -70,6 +86,9 @@ export default function UserReports() {
             />
             <PieCard pieChartData={pieChartData} />
           </SimpleGrid>
+        </SimpleGrid>
+        <SimpleGrid>
+          <BarChartSecond barChartDataConsumption={barChartSecondDataConsumption} />
         </SimpleGrid>
       </Box>
     </>
