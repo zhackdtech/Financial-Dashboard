@@ -22,13 +22,13 @@ export function SidebarLinks(props) {
   let activeColor = useColorModeValue("navy.500", "#7551ff");
   let inactiveColor = useColorModeValue("white", "transparent");
   // colors for the Link text
-  let inactiveText = useColorModeValue("navy.700","white");
-  let activeText = useColorModeValue("white","white");
+  let inactiveText = useColorModeValue("navy.700", "white");
+  let activeText = useColorModeValue("white", "white");
   // colors for the icon
-  let activeIcon = useColorModeValue("navy.500","#7551ff");
+  let activeIcon = useColorModeValue("navy.500", "#7551ff");
   let inactiveIcon = useColorModeValue("navy.700");
   // the icon bg
-  let activeIconBg = useColorModeValue("white","white");
+  let activeIconBg = useColorModeValue("white", "white");
   let inactiveIconBg = useColorModeValue("transparent");
 
   let textColor = useColorModeValue("secondaryGray.500", "white");
