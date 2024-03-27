@@ -62,7 +62,7 @@ const tableDataUserTable = [
     image:
       "https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/311092704_5485674428166550_9128903111187655293_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF5-maKfmMqWtNZeNcIh6WHLGNl06BI2O4sY2XToEjY7joGzuEf6PQyPeQBH_co4LpHvIJAlLFL7R0XLe6JQO6U&_nc_ohc=6F3pGttSAV8AX851fFq&_nc_ht=scontent.fmnl13-2.fna&cb_e2o_trans=t&oh=00_AfAjvBws0OoR_rBT7sNA_wvcvFH9npTReYs5YlE2ElvZNQ&oe=66060855",
     name: "Israel Breta",
-    role: "Chief  Officer",
+    role: "Chief Innovation Officer",
     date: "01 Aug, 2023",
   },
   {
