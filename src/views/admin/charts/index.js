@@ -57,15 +57,15 @@ const pieChartData = [1500, 700];
 
 const barChartSecondDataConsumption = [
   {
-    name: "PRODUCT A",
+    name: "Lorem A:",
     data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
   },
   {
-    name: "PRODUCT B",
+    name: "Ipsum B",
     data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
   },
   {
-    name: "PRODUCT C",
+    name: "Dolor C",
     data: [500, 370, 330, 390, 320, 350, 360, 320, 380],
   },
 ];
