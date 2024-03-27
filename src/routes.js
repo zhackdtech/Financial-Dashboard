@@ -7,6 +7,7 @@ import {
   FaGear,
   FaTable,
 } from 'react-icons/fa6';
+import Charts from 'views/admin/charts';
 // Admin Imports
 import MainDashboard from 'views/admin/dashboard';
 import Tables from 'views/admin/tables';
@@ -32,15 +33,8 @@ const routes = [
     name: "Charts",
     layout: "/admin",
     path: "/charts",
-    icon: (
-      <Icon
-        as={FaChartPie}
-        width="20px"
-        height="20px"
-        color="inherit"
-      />
-    ),
-    component: MainDashboard,
+    icon: <Icon as={FaChartPie} width="20px" height="20px" color="inherit" />,
+    component: Charts,
   },
   {
     name: "Profile",
