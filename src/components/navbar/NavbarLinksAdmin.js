@@ -59,14 +59,14 @@ export default function HeaderLinks(props) {
       <SidebarResponsive routes={routes} />
       <Menu>
         <MenuButton p="0px" onClick={toggleColorMode}>
-            <Icon
-              mt="6px"
-              as={colorMode === 'light' ? FaMoon : FaSun }
-              color={navbarIcon}
-              w="18px"
-              h="18px"
-              me="10px"
-            />
+          <Icon
+            mt="6px"
+            as={colorMode === "light" ? FaMoon : FaSun}
+            color={navbarIcon}
+            w="18px"
+            h="18px"
+            me="10px"
+          />
         </MenuButton>
       </Menu>
       <Menu>
@@ -116,7 +116,7 @@ export default function HeaderLinks(props) {
               <ItemContent
                 title="Update:"
                 info="SysGo Finance Dashboard v1.0"
-                content="An update is available, please update your system to the newer version."
+                content="An update is available, please update your system to..."
               />
             </MenuItem>
           </Flex>
@@ -169,7 +169,7 @@ export default function HeaderLinks(props) {
               <ItemContent
                 title="New message from:"
                 info="John Doe"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing eli..."
               />
             </MenuItem>
           </Flex>
