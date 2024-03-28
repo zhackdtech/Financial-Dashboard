@@ -22,19 +22,34 @@
 
 import React from 'react';
 
+import { FaBarsProgress } from 'react-icons/fa6';
+
 // Chakra imports
 import {
   Box,
-  SimpleGrid,
+  Grid,
 } from '@chakra-ui/react';
 
 import Banner from './components/Banner';
+import CardProgress from './components/CardProgress';
+import Upload from './components/Upload';
 
 export default function Overview() {
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 3 }} gap="20px">
+      <Grid
+        templateColumns={{
+          base: "1fr",
+          lg: "1.34fr 1fr 1.62fr",
+        }}
+        templateRows={{
+          base: "repeat(3, 1fr)",
+          lg: "1fr",
+        }}
+        gap={{ base: "20px", xl: "20px" }}
+      >
         <Banner
+          gridArea="1 / 1 / 2 / 2"
           banner="https://www.readz.com/image/8359264.1620928269000/gradient-backgrounds.webp"
           avatar="https://avatars.githubusercontent.com/u/50767502?v=4"
           name="Zhack D'Tech"
@@ -43,7 +58,15 @@ export default function Overview() {
           dolor="22"
           ipsum="31"
         />
-      </SimpleGrid>
+        <CardProgress
+          header="Progress Card"
+          sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          icon={FaBarsProgress}
+          used="20"
+          max="100"
+        />
+        <Upload />
+      </Grid>
     </Box>
   );
 }

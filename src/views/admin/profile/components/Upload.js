@@ -24,7 +24,7 @@ export default function Upload(props) {
   const brandColor = useColorModeValue("brand.500", "white");
   const textColorSecondary = "gray.400";
   return (
-    <Card {...rest} mb='20px' align='center' p='20px'>
+    <Card {...rest} mb='20px' align='center' p='20px' h="100%">
       <Flex h='100%' direction={{ base: "column", "2xl": "row" }}>
         <Dropzone
           w={{ base: "100%", "2xl": "268px" }}
@@ -36,7 +36,7 @@ export default function Upload(props) {
               <Icon as={MdUpload} w='80px' h='80px' color={brandColor} />
               <Flex justify='center' mx='auto' mb='12px'>
                 <Text fontSize='xl' fontWeight='700' color={brandColor}>
-                  Upload Files
+                  Lorem ipsum
                 </Text>
               </Flex>
               <Text fontSize='sm' fontWeight='500' color='secondaryGray.500'>
@@ -52,7 +52,7 @@ export default function Upload(props) {
             textAlign='start'
             fontSize='2xl'
             mt={{ base: "20px", "2xl": "50px" }}>
-            Complete your profile
+            Lorem 
           </Text>
           <Text
             color={textColorSecondary}
@@ -60,8 +60,7 @@ export default function Upload(props) {
             my={{ base: "auto", "2xl": "10px" }}
             mx='auto'
             textAlign='start'>
-            Stay on the pulse of distributed projects with an anline whiteboard
-            to plan, coordinate and discuss
+            Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
           </Text>
           <Flex w='100%'>
             <Button
