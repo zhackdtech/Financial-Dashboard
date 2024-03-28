@@ -8,8 +8,8 @@ import {
   FaTable,
 } from 'react-icons/fa6';
 import Charts from 'views/admin/charts';
-// Admin Imports
 import MainDashboard from 'views/admin/dashboard';
+import Profile from 'views/admin/profile';
 import Tables from 'views/admin/tables';
 
 import { Icon } from '@chakra-ui/react';
@@ -41,7 +41,7 @@ const routes = [
     layout: "/admin",
     path: "/profile",
     icon: <Icon as={FaCircleUser} width="20px" height="20px" color="inherit" />,
-    component: MainDashboard,
+    component: Profile,
   },
   {
     name: "Signin",
